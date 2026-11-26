@@ -1,0 +1,111 @@
+
+.verify-page {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background: #faf7f4;
+}
+
+.verify-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 40px 35px;
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.07);
+}
+
+.verify-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5eafa;
+    color: #a752dc;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.verify-card h1 {
+    color: #29232d;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.verify-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.verify-card strong {
+    color: #8e3ec1;
+}
+
+.verify-card form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    text-align: left;
+}
+
+.verify-card label {
+    margin-bottom: 10px;
+    color: #39313d;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.verify-card input {
+    padding: 15px;
+    border: 1px solid #ded8e2;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 9px;
+}
+
+.verify-card input:focus {
+    border-color: #a752dc;
+}
+
+.verify-card button {
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #a752dc;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.verify-card button:hover {
+    background: #8736bd;
+}
+
+.verify-card button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.verify-error {
+    color: #d93025 !important;
+    font-size: 13px !important;
+}
+
+.verify-back {
+    display: inline-block;
+    margin-top: 22px;
+    color: #a752dc;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}

@@ -1,0 +1,185 @@
+
+.navbar {
+    width: 100%;
+    min-height: 74px;
+    padding: 12px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5, 11, 24, 0.96);
+    border-bottom: 1px solid #172c4c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, #28b6f6, #5145e5);
+    box-shadow: 0 0 18px rgba(40, 182, 246, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a8b6cc;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #28b6f6;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-btn,
+.register-btn,
+.book-btn,
+.pending-btn,
+.logout-btn {
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.login-btn {
+    color: white;
+    border: 1px solid #24466d;
+    background: #101b34;
+}
+
+.register-btn {
+    color: white;
+    background: #5145e5;
+}
+
+.book-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    background: linear-gradient(110deg, #28b6f6, #5145e5);
+    box-shadow: 0 5px 18px rgba(40, 100, 240, 0.25);
+}
+
+.user-role {
+    color: #28b6f6;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 9px 13px;
+    border: 1px solid #24466d;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.pending-btn {
+    color: #ffd27a;
+    background: #332811;
+    border: 1px solid #80632b;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    background: #26344d;
+    border: 1px solid #3c5274;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.register-btn:hover,
+.book-btn:hover,
+.pending-btn:hover,
+.logout-btn:hover {
+    transform: translateY(-2px);
+}
+
+.mobile-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-actions {
+        gap: 7px;
+    }
+
+    .login-btn,
+    .register-btn,
+    .book-btn,
+    .pending-btn,
+    .logout-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 22px 5px 12px;
+    }
+
+    .nav-actions.show-actions {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px 5px 18px;
+    }
+}

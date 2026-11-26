@@ -1,0 +1,243 @@
+
+/* ========================================
+   GATHERGRID - REGISTER PAGE
+   DARK NAVY & BLUE THEME
+======================================== */
+
+.register-page {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(40, 182, 246, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(81, 69, 229, 0.14), transparent 35%),
+        #070e1d;
+}
+
+/* REGISTER CARD */
+
+.register-card {
+    width: 100%;
+    max-width: 540px;
+    padding: 38px;
+
+    background: #101b34;
+    border: 1px solid #1b385c;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* HEADING */
+
+.register-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.register-logo {
+    color: #48c9ff;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.register-heading h1 {
+    margin: 15px 0 8px;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.register-heading p {
+    color: #a8bad3;
+    font-size: 14px;
+}
+
+/* FORM */
+
+.register-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-card label {
+    margin: 13px 0 7px;
+    color: #e3ebf7;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* INPUT FIELDS */
+
+.register-card input {
+    width: 100%;
+    padding: 13px 14px;
+
+    background: #070e1d;
+    color: #ffffff;
+
+    border: 1px solid #24466d;
+    border-radius: 8px;
+    outline: none;
+
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.register-card input::placeholder {
+    color: #8195b2;
+}
+
+.register-card input:focus {
+    border-color: #28b6f6;
+    box-shadow: 0 0 0 3px rgba(40, 182, 246, 0.12);
+}
+
+/* CHROME AUTOFILL STYLE */
+
+.register-card input:-webkit-autofill,
+.register-card input:-webkit-autofill:hover,
+.register-card input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0 1000px #070e1d inset;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: #ffffff;
+}
+
+/* ROLE OPTIONS */
+
+.role-options {
+    display: flex;
+    gap: 12px;
+}
+
+.role-option {
+    flex: 1;
+    padding: 13px;
+
+    background: #070e1d;
+    border: 1px solid #24466d;
+    border-radius: 8px;
+
+    color: #b7c6dc;
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.role-option:hover {
+    border-color: #28b6f6;
+    color: #48c9ff;
+}
+
+.role-option.active {
+    background: rgba(40, 182, 246, 0.13);
+    color: #48c9ff;
+    border-color: #28b6f6;
+}
+
+/* ORGANIZER DETAILS */
+
+.organizer-fields {
+    margin-top: 12px;
+    padding: 18px;
+
+    background: #0b1428;
+    border: 1px solid #1b385c;
+    border-radius: 12px;
+}
+
+.organizer-fields h3 {
+    color: #48c9ff;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+/* REGISTER BUTTON */
+
+.register-submit {
+    margin-top: 25px;
+    padding: 14px;
+
+    background: linear-gradient(100deg, #28b6f6, #5145e5);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.register-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(40, 100, 220, 0.3);
+}
+
+.register-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ERROR MESSAGE */
+
+.register-error {
+    color: #ff8585;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* LOGIN LINK */
+
+.register-login {
+    text-align: center;
+    margin-top: 22px;
+    color: #a8bad3;
+    font-size: 14px;
+}
+
+.register-login a {
+    color: #48c9ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-login a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .register-page {
+        padding: 35px 15px;
+    }
+
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-heading h1 {
+        font-size: 23px;
+    }
+
+    .role-options {
+        gap: 8px;
+    }
+
+    .role-option {
+        padding: 11px 6px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,389 @@
+
+/* MAIN PAGE */
+
+.organizers-page {
+    min-height: 80vh;
+    padding: 50px 7%;
+    background: #070e1d;
+    position: relative;
+}
+
+
+/* PAGE HEADER */
+
+.organizers-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 50px;
+}
+
+.organizers-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    border: 1px solid #24528a;
+    border-radius: 30px;
+
+    background: rgba(10, 25, 51, 0.8);
+
+    color: #48c9ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.organizers-header h1 {
+    font-size: clamp(35px, 5vw, 50px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 22px 0 15px;
+}
+
+.organizers-header h1 span {
+    background: linear-gradient(
+        100deg,
+        #48c9ff,
+        #7182ff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.organizers-header p {
+    max-width: 720px;
+    margin: auto;
+
+    color: #b9cce5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* SELECTED CATEGORY */
+
+.selected-organizer-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding: 12px 19px;
+
+    background: #101b34;
+    border: 1px solid #24528a;
+    border-radius: 10px;
+
+    color: #b9cce5;
+    font-size: 14px;
+}
+
+.selected-organizer-category strong {
+    color: #48c9ff;
+}
+
+
+/* SEARCH SECTION */
+
+.organizers-controls {
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.organizer-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    height: 56px;
+    padding: 0 18px;
+
+    background: #101b34;
+    border: 1px solid #24528a;
+    border-radius: 12px;
+
+    color: #28b6f6;
+
+    transition: 0.3s ease;
+}
+
+.organizer-search:focus-within {
+    border-color: #28b6f6;
+    box-shadow: 0 0 15px rgba(40, 182, 246, 0.12);
+}
+
+.organizer-search input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.organizer-search input::placeholder {
+    color: #8297b5;
+}
+
+
+/* ORGANIZER LIST */
+
+.organizers-list-section {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.organizers-list-heading {
+    margin-bottom: 27px;
+}
+
+.organizers-list-heading h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.organizers-list-heading p {
+    color: #94a9c5;
+    font-size: 14px;
+}
+
+.organizers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* ORGANIZER CARD */
+
+.organizer-card {
+    background: #101b34;
+    border: 1px solid #1b385c;
+    border-radius: 18px;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.organizer-card:hover {
+    transform: translateY(-6px);
+    border-color: #28b6f6;
+
+    box-shadow: 0 12px 30px rgba(40, 182, 246, 0.12);
+}
+
+
+/* ORGANIZER IMAGE */
+
+.organizer-card-image {
+    height: 210px;
+    position: relative;
+    background: #142b50;
+}
+
+.organizer-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.organizer-image-placeholder {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #48c9ff;
+
+    background: linear-gradient(
+        135deg,
+        #142b50,
+        #203e81
+    );
+}
+
+.organizer-verified {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(5, 11, 24, 0.9);
+    border: 1px solid #24528a;
+
+    color: #48c9ff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* CARD CONTENT */
+
+.organizer-card-content {
+    padding: 23px;
+}
+
+.organizer-label {
+    color: #28b6f6;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.organizer-card-content h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin: 11px 0;
+}
+
+.organizer-card-content p {
+    color: #9cacc3;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+
+/* CARD FOOTER */
+
+.organizer-card-footer {
+    border-top: 1px solid #1b385c;
+
+    margin-top: 20px;
+    padding-top: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.organizer-card-footer > span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #48c9ff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* VIEW ORGANIZER BUTTON */
+
+.organizer-card-footer button {
+    width: 100%;
+    min-height: 46px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        100deg,
+        #28b6f6,
+        #5145e5
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.organizer-card-footer button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 20px rgba(40, 120, 240, 0.25);
+}
+
+
+/* LOADING / EMPTY / ERROR MESSAGES */
+
+.organizers-message {
+    text-align: center;
+
+    padding: 55px 20px;
+
+    background: #101b34;
+    border: 1px solid #1b385c;
+    border-radius: 15px;
+
+    color: #94a9c5;
+}
+
+.organizers-message svg {
+    color: #28b6f6;
+}
+
+.organizers-message h3 {
+    color: #ffffff;
+    margin: 15px 0 8px;
+}
+
+.organizers-message p {
+    color: #94a9c5;
+}
+
+.organizers-message.error {
+    color: #ff8585;
+    border-color: #713b50;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .organizers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .organizers-page {
+        padding: 35px 5%;
+    }
+
+    .organizers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .organizers-header h1 {
+        font-size: 32px;
+    }
+
+    .organizers-card-content {
+        padding: 18px;
+    }
+
+    .organizers-list-heading h2 {
+        font-size: 23px;
+    }
+
+}

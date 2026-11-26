@@ -1,0 +1,117 @@
+
+.pending-page {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #faf7f4;
+}
+
+.pending-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 45px 35px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.07);
+}
+
+.pending-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.pending-label {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #fff3d6;
+    color: #9b6a00;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pending-card h1 {
+    margin: 20px 0 15px;
+    color: #29232d;
+    font-size: 26px;
+}
+
+.pending-card p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pending-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    padding: 17px;
+    background: #fff8e9;
+    border: 1px solid #f3e3bd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.pending-status span {
+    color: #555;
+}
+
+.pending-status strong {
+    color: #9b6a00;
+}
+
+.pending-email {
+    font-size: 13px !important;
+}
+
+.pending-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.pending-home,
+.pending-logout {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pending-home {
+    background: #a752dc;
+    color: white;
+    text-decoration: none;
+}
+
+.pending-home:hover {
+    background: #8736bd;
+}
+
+.pending-logout {
+    background: white;
+    border: 1px solid #ded8e2;
+    color: #555;
+}
+
+@media (max-width: 500px) {
+    .pending-card {
+        padding: 30px 20px;
+    }
+
+    .pending-card h1 {
+        font-size: 22px;
+    }
+
+    .pending-actions {
+        flex-direction: column;
+    }
+}
