@@ -1,152 +1,250 @@
+# GatherGrid — Event Discovery & Booking Platform
 
-# GatherGrid – Event Discovery & Booking Platform
+<p align="center">
+  <img src="https://img.shields.io/badge/GatherGrid-Event%20Platform-1E3A8A?style=for-the-badge&logo=calendar&logoColor=white" alt="GatherGrid"/>
+</p>
 
-GatherGrid is a full-stack event discovery and booking platform that connects customers with event organizers. It allows users to explore event categories, discover event services and packages, submit booking requests, and track booking status through a user-friendly interface.
+<p align="center">
+  <strong>Discover. Connect. Celebrate.</strong>
+</p>
 
-The platform provides separate experiences for customers, organizers, and administrators, with role-based access control and an approval workflow for event organizers.
+<p align="center">
+  A full-stack event discovery and booking platform connecting customers with event organizers through a seamless, role-based experience.
+</p>
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [User Roles](#user-roles)
-- [Technology Stack](#technology-stack)
-- [System Architecture](#system-architecture)
-- [Project Structure](#project-structure)
-- [Application Workflow](#application-workflow)
-- [Database Design](#database-design)
-- [API Documentation](#api-documentation)
-- [Installation and Setup](#installation-and-setup)
-- [Environment Variables](#environment-variables)
-- [Running the Application](#running-the-application)
-- [Security](#security)
-- [Future Enhancements](#future-enhancements)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express.js-REST%20API-000000?style=flat-square&logo=express&logoColor=white" alt="Express"/>
+  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Cloudinary-Image%20Storage-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary"/>
+</p>
 
 ---
 
-## Project Overview
+## Overview
 
-GatherGrid simplifies the process of discovering event services and connecting with organizers.
+GatherGrid is a full-stack web application designed to simplify event discovery, organizer management, and event booking.
 
-Customers can browse available event listings, view detailed service information, compare packages, and submit booking requests. Organizers can manage their event listings and respond to customer bookings. Administrators manage users and approve or reject organizer registrations.
+The platform enables customers to explore event listings, discover services and packages, and submit booking requests. Event organizers can manage their listings and respond to customer bookings, while administrators oversee users and organizer approvals.
 
-The application follows a client-server architecture:
+The application is built using the MERN stack and follows a modular client-server architecture with RESTful APIs, MongoDB persistence, and role-based access control.
 
-- **Frontend:** React-based user interface.
-- **Backend:** Node.js and Express REST API.
-- **Database:** MongoDB with Mongoose.
-- **Image Storage:** Cloudinary.
-- **Authentication:** JSON Web Tokens (JWT).
+## ✨ Key Features
 
-## Features
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎟️ Event Discovery</h3>
+      Browse event categories, search listings, explore featured events, and view detailed event information.
+    </td>
+    <td width="50%">
+      <h3>📅 Booking Management</h3>
+      Submit booking requests, select packages, track booking status, and manage personal bookings.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🏢 Organizer Dashboard</h3>
+      Create, update, and manage event listings, upload images, and respond to customer booking requests.
+    </td>
+    <td width="50%">
+      <h3>🛡️ Admin Dashboard</h3>
+      Manage users, approve or reject organizers, and oversee booking operations.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔐 Secure Authentication</h3>
+      JWT-based authentication, password hashing, email OTP verification, and protected routes.
+    </td>
+    <td width="50%">
+      <h3>☁️ Cloud Integration</h3>
+      Cloudinary image storage and email-based verification and password recovery.
+    </td>
+  </tr>
+</table>
 
-### 1. Customer Features
+## 🖥️ Application Screenshots
 
-- Customer registration and email verification using OTP.
-- Secure login and password authentication.
-- Browse event categories and available event listings.
-- Search for events using keywords.
-- Filter events by category and featured status.
-- View event details, organizers, services, and packages.
-- Submit booking requests with event date, location, guest count, selected package, and additional message.
-- View personal booking history and booking status.
-- Cancel booking requests.
-- Access a dedicated customer dashboard.
+Add screenshots of your actual application to the `screenshots/` directory.
 
-### 2. Organizer Features
-
-- Register as an event organizer with organization details.
-- Verify email through OTP.
-- Wait for administrator approval before accessing organizer management features.
-- Create event listings with descriptions, categories, services, and packages.
-- Upload event images using Cloudinary.
-- Update and delete event listings.
-- View and manage organizer events.
-- View customer booking requests.
-- Update booking status through the organizer dashboard.
-- Access an organizer dashboard after approval.
-
-### 3. Administrator Features
-
-- Access a protected administrator dashboard.
-- View registered users and organizers.
-- Approve or reject organizer registrations.
-- Manage user account status.
-- View all bookings.
-- Update booking statuses.
-- Control organizer access through the approval process.
-
-### 4. Additional Features
-
-- Password reset using email OTP.
-- Public organizer listings and organizer details.
-- Contact form for submitting messages.
-- Featured event listings.
-- Event category management.
-- Responsive frontend pages.
-- Centralized API communication using Axios.
-- Protected frontend routes and backend authorization middleware.
-
-## User Roles
-
-| Role | Main Responsibilities |
+| Home Page | Event Discovery |
 |---|---|
-| Customer | Discover events, submit bookings, track and cancel bookings |
-| Organizer | Create events, manage listings, respond to bookings |
-| Administrator | Approve organizers, manage users, monitor bookings |
+| ![Home Page](screenshots/home.png) | ![Events Page](screenshots/events.png) |
 
-The application uses role-based authorization to restrict access to customer, organizer, and administrator operations.
+| Event Details | Customer Dashboard |
+|---|---|
+| ![Event Details](screenshots/event-details.png) | ![Customer Dashboard](screenshots/customer-dashboard.png) |
 
-## Technology Stack
+| Organizer Dashboard | Admin Dashboard |
+|---|---|
+| ![Organizer Dashboard](screenshots/organizer-dashboard.png) | ![Admin Dashboard](screenshots/admin-dashboard.png) |
 
-### Frontend
+> Replace these image paths with your actual screenshots. The screenshots directory and image files must exist in your repository for the images to display.
 
-- React 19
-- Vite
-- React Router
-- Axios
-- JavaScript
-- HTML5
-- CSS3
-- Lucide React icons
+## 🏗️ System Architecture
 
-### Backend
+GatherGrid follows a three-tier architecture:
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JSON Web Tokens (JWT)
-- bcryptjs
-- Nodemailer
-- Cloudinary
-- Multer
+1. **Presentation Layer:** React frontend for user interaction and navigation.
+2. **Application Layer:** Node.js and Express backend for API handling, authentication, authorization, and business logic.
+3. **Data Layer:** MongoDB for persistent storage, with Cloudinary and email services for external integrations.
 
-### Security and Middleware
+```mermaid
+flowchart TB
+    classDef frontend fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px
+    classDef backend fill:#EDE9FE,stroke:#7C3AED,color:#4C1D95,stroke-width:2px
+    classDef database fill:#D1FAE5,stroke:#059669,color:#065F46,stroke-width:2px
+    classDef external fill:#FEF3C7,stroke:#D97706,color:#92400E,stroke-width:2px
 
-- Helmet
-- CORS
-- Express Rate Limit
-- JWT authentication
-- Role-based authorization
-- Centralized error handling
+    subgraph Client["Presentation Layer"]
+        UI["React + Vite Frontend"]
+        ROUTER["React Router"]
+        AUTH["AuthContext + ProtectedRoute"]
+        API["Axios API Service"]
 
-### Development Tools
+        UI --> ROUTER
+        UI --> AUTH
+        UI --> API
+    end
 
-- Git and GitHub
-- npm
-- Nodemon
-- ESLint
+    subgraph Application["Application Layer"]
+        SERVER["Node.js + Express Server"]
+        SECURITY["Security Middleware"]
+        ROUTES["REST API Routes"]
+        CONTROLLERS["Controllers"]
+        AUTHZ["JWT Authentication & Role Authorization"]
 
-## System Architecture
+        SERVER --> SECURITY
+        SECURITY --> ROUTES
+        ROUTES --> AUTHZ
+        AUTHZ --> CONTROLLERS
+    end
 
-GatherGrid uses a three-tier architecture consisting of a presentation layer, application layer, and data layer.
+    subgraph Storage["Data Layer"]
+        MODELS["Mongoose Models"]
+        DB[("MongoDB")]
+        MODELS --> DB
+    end
 
-The React frontend communicates with the Express backend through REST APIs. The backend validates requests, applies authentication and authorization, executes business logic, and interacts with MongoDB or external services.
+    subgraph Services["External Services"]
+        CLOUD["Cloudinary Image Storage"]
+        EMAIL["Email Service / SMTP"]
+    end
 
-See the architecture diagram below for the complete request flow.
+    API <-->|"HTTP / JSON"| SERVER
+    CONTROLLERS <--> MODELS
+    CONTROLLERS --> CLOUD
+    CONTROLLERS --> EMAIL
 
-## Project Structure
+    class UI,ROUTER,AUTH,API frontend
+    class SERVER,SECURITY,ROUTES,CONTROLLERS,AUTHZ backend
+    class MODELS,DB database
+    class CLOUD,EMAIL external
+```
+
+### Architecture Components
+
+| Component | Responsibility |
+|---|---|
+| React + Vite | Renders the frontend and handles user interaction |
+| React Router | Manages application navigation |
+| Axios | Sends HTTP requests to the backend |
+| Express.js | Defines and handles REST API endpoints |
+| Authentication Middleware | Verifies JWTs and identifies users |
+| Authorization Middleware | Enforces user roles and organizer approval |
+| Mongoose | Defines schemas and communicates with MongoDB |
+| MongoDB | Stores users, events, bookings, categories, and OTP records |
+| Cloudinary | Stores uploaded event images |
+| Nodemailer | Sends email verification and password reset OTPs |
+
+## 🔄 Booking Workflow
+
+```mermaid
+sequenceDiagram
+    actor Customer
+    participant Frontend as React Frontend
+    participant Backend as Express API
+    participant Database as MongoDB
+    actor Organizer
+
+    Customer->>Frontend: Select event and submit booking
+    Frontend->>Backend: POST /api/bookings
+    Backend->>Backend: Authenticate and validate request
+    Backend->>Database: Create booking
+    Database-->>Backend: Booking saved
+    Backend-->>Frontend: Booking confirmation
+    Frontend-->>Customer: Display booking status
+
+    Organizer->>Frontend: Open booking dashboard
+    Frontend->>Backend: GET /api/bookings/organizer
+    Backend->>Database: Retrieve organizer bookings
+    Database-->>Backend: Return booking records
+    Backend-->>Frontend: Booking information
+    Frontend-->>Organizer: Display booking requests
+```
+
+## 🛠️ Technology Stack
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Technologies</th>
+  </tr>
+  <tr>
+    <td>Frontend</td>
+    <td>React, Vite, React Router, Axios, JavaScript, HTML5, CSS3</td>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td>Node.js, Express.js, REST APIs</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>MongoDB, Mongoose</td>
+  </tr>
+  <tr>
+    <td>Authentication</td>
+    <td>JWT, bcryptjs, OTP verification</td>
+  </tr>
+  <tr>
+    <td>Cloud Services</td>
+    <td>Cloudinary, Nodemailer</td>
+  </tr>
+  <tr>
+    <td>Security</td>
+    <td>Helmet, CORS, Express Rate Limit, Authorization Middleware</td>
+  </tr>
+  <tr>
+    <td>Development</td>
+    <td>Git, GitHub, npm, Nodemon, ESLint</td>
+  </tr>
+</table>
+
+## 👥 User Roles
+
+### Customer
+- Register and verify email.
+- Browse and search event listings.
+- View event details, services, and packages.
+- Submit and manage booking requests.
+- Track booking status.
+
+### Event Organizer
+- Register as an organizer.
+- Complete email verification and await administrator approval.
+- Create and manage event listings.
+- Upload event images.
+- View customer booking requests and update their status.
+
+### Administrator
+- Manage registered users.
+- Approve or reject organizer accounts.
+- Manage user account status.
+- View and manage bookings.
+
+## 📁 Project Structure
 
 ```text
 GatherGrid/
@@ -156,327 +254,65 @@ GatherGrid/
 │   ├── src/
 │   │   ├── assets/
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   └── ProtectedRoute.jsx
-│   │   │
 │   │   ├── context/
-│   │   │   └── AuthContext.jsx
-│   │   │
 │   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── Events.jsx
-│   │   │   ├── EventDetails.jsx
-│   │   │   ├── Organizers.jsx
-│   │   │   ├── OrganizersDetails.jsx
-│   │   │   ├── CustomerDashboard.jsx
-│   │   │   ├── OrganizerDashboard.jsx
-│   │   │   ├── OrganizerEvents.jsx
-│   │   │   ├── AdminDashboard.jsx
-│   │   │   ├── Register.jsx
-│   │   │   ├── VerifyOTP.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── ForgotPassword.jsx
-│   │   │   ├── ResetPassword.jsx
-│   │   │   ├── Contact.jsx
-│   │   │   └── About.jsx
-│   │   │
 │   │   ├── services/
-│   │   │   └── api.js
-│   │   │
 │   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   │
+│   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
 │
 ├── backend/
 │   ├── config/
-│   │   ├── db.js
-│   │   └── cloudinary.js
-│   │
 │   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── adminController.js
-│   │   ├── bookingController.js
-│   │   ├── categoryController.js
-│   │   ├── eventController.js
-│   │   └── ContactController.js
-│   │
 │   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   ├── authRateLimit.js
-│   │   ├── errorMiddleware.js
-│   │   └── notFound.js
-│   │
 │   ├── models/
-│   │   ├── User.js
-│   │   ├── Event.js
-│   │   ├── Booking.js
-│   │   ├── EventCategory.js
-│   │   └── OTP.js
-│   │
 │   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── adminRoutes.js
-│   │   ├── bookingRoutes.js
-│   │   ├── categoryRoutes.js
-│   │   ├── contactRoutes.js
-│   │   ├── eventRoutes.js
-│   │   └── organizerRoutes.js
-│   │
 │   ├── scripts/
-│   │   ├── createAdmin.js
-│   │   ├── seedCategories.js
-│   │   └── updateAdminEmail.js
-│   │
 │   ├── utils/
-│   │   └── sendEmail.js
-│   │
 │   ├── server.js
-│   ├── seed.js
 │   └── package.json
 │
+├── screenshots/
 ├── .gitignore
 └── README.md
 ```
 
-## Application Workflow
-
-### Customer Booking Workflow
-
-1. A customer registers and verifies their email address.
-2. The customer logs in and receives an authentication token.
-3. The customer browses events and selects an event listing.
-4. The customer views the event details, available packages, and organizer information.
-5. The customer submits a booking request with the required event details.
-6. The backend validates the request and stores the booking in MongoDB.
-7. The organizer views the booking request and updates its status.
-8. The customer can view the updated booking status in their dashboard.
-
-### Organizer Approval Workflow
-
-1. An organizer registers with organization information.
-2. The organizer verifies their email address.
-3. The organizer account is created with a pending approval status.
-4. The administrator reviews the organizer registration.
-5. The administrator approves or rejects the organizer.
-6. Approved organizers can access event creation and booking management features.
-
-### Authentication Workflow
-
-1. The user submits login credentials.
-2. The backend validates the credentials against the stored account.
-3. The password is checked using bcryptjs.
-4. The backend generates a JWT containing the user ID and role.
-5. The frontend uses the token for authenticated API requests.
-6. Backend middleware verifies the token and checks the user's permissions.
-
-## Database Design
-
-GatherGrid uses MongoDB for data persistence and Mongoose for schema definition, validation, and database operations.
-
-### User Collection
-
-Stores customer, organizer, and administrator accounts.
-
-Important fields:
-
-- `name`
-- `email`
-- `password`
-- `role`
-- `organizationName`
-- `licenseNumber`
-- `officialEmail`
-- `isEmailVerified`
-- `isApproved`
-- `approvalStatus`
-- `isActive`
-- `profileImage`
-
-### Event Collection
-
-Stores event listings created by organizers.
-
-Important fields:
-
-- `organizer`
-- `title`
-- `slug`
-- `category`
-- `shortDescription`
-- `description`
-- `image`
-- `gallery`
-- `services`
-- `packages`
-- `estimatedDuration`
-- `startingPrice`
-- `tags`
-- `isFeatured`
-- `isActive`
-
-Each event is associated with an organizer and an event category.
-
-### Booking Collection
-
-Stores booking requests submitted by customers.
-
-Important fields:
-
-- `customer`
-- `organizer`
-- `event`
-- `eventDate`
-- `eventLocation`
-- `guestCount`
-- `packageName`
-- `packagePrice`
-- `message`
-- `status`
-- `statusHistory`
-
-Booking statuses include:
-
-- Pending
-- Approved
-- Rejected
-- Completed
-- Cancelled
-
-The booking status history records the status, the user who changed it, the date of the change, and an optional note.
-
-### EventCategory Collection
-
-Stores event categories used to organize and filter event listings.
-
-Important fields:
-
-- `name`
-- `slug`
-- `description`
-- `image`
-- `icon`
-- `isActive`
-- `sortOrder`
-
-### OTP Collection
-
-Stores OTP verification records used for registration and password reset.
-
-The OTP records include the email address, hashed OTP, purpose, expiration time, and verification attempt information.
-
-## API Documentation
-
-The backend exposes REST API endpoints under the `/api` prefix.
-
-### Authentication APIs
-
-Base URL: `/api/auth`
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/send-otp` | Send registration OTP |
-| POST | `/register` | Register a user |
-| POST | `/login` | Authenticate a user |
-| POST | `/forgot-password` | Send password reset OTP |
-| POST | `/reset-password` | Reset password |
-| GET | `/me` | Get current authenticated user |
-
-### Event APIs
-
-Base URL: `/api/events`
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/` | Retrieve events with search and filters |
-| GET | `/:id` | Retrieve event details |
-| POST | `/` | Create an event |
-| GET | `/my-events` | Retrieve organizer's events |
-| POST | `/:id/image` | Upload an event image |
-| PUT | `/:id` | Update an event |
-| DELETE | `/:id` | Delete an event |
-
-Event creation, image upload, updating, and deletion require an authenticated and approved organizer.
-
-### Booking APIs
-
-Base URL: `/api/bookings`
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/` | Create a customer booking |
-| GET | `/my-bookings` | Retrieve customer bookings |
-| GET | `/organizer` | Retrieve organizer bookings |
-| PATCH | `/:id/status` | Update booking status |
-| PATCH | `/:id/cancel` | Cancel a customer booking |
-| GET | `/admin` | Retrieve all bookings |
-| PATCH | `/admin/:id/status` | Update booking status as admin |
-
-### Administrator APIs
-
-Base URL: `/api/admin`
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/organizers` | Retrieve organizer accounts |
-| PATCH | `/organizers/:id/approve` | Approve an organizer |
-| PATCH | `/organizers/:id/reject` | Reject an organizer |
-| GET | `/users` | Retrieve users |
-| PATCH | `/users/:id/status` | Update user account status |
-
-### Additional APIs
-
-| Base URL | Method | Endpoint | Purpose |
-|---|---|---|---|
-| `/api/categories` | GET | `/` | Retrieve categories |
-| `/api/categories` | GET | `/:id` | Retrieve a category |
-| `/api/organizers` | GET | `/` | Retrieve public organizers |
-| `/api/organizers` | GET | `/:id` | Retrieve organizer details |
-| `/api/contact` | POST | `/` | Submit a contact message |
-
-## Installation and Setup
+## 🚀 Getting Started
 
 ### Prerequisites
 
-Install the following before running the project:
-
 - Node.js and npm
-- MongoDB database (local or MongoDB Atlas)
-- Cloudinary account for event image storage
-- Email account or SMTP credentials for OTP delivery
+- MongoDB database or MongoDB Atlas
+- Cloudinary account
+- SMTP email credentials
 
-### Step 1: Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd GatherGrid
 ```
 
-Replace the repository URL with your actual GitHub repository URL.
-
-### Step 2: Install Backend Dependencies
+### 2. Install backend dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
-### Step 3: Configure Backend Environment
+### 3. Configure backend environment variables
 
-Create a `.env` file inside the `backend` directory and add the required environment variables.
+Create a `.env` file inside the `backend` directory.
 
 ```env
 PORT=5000
 CLIENT_URL=http://localhost:5173
 
 MONGO_URI=your_mongodb_connection_string
-
 JWT_SECRET=your_secure_jwt_secret
 
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
@@ -484,26 +320,22 @@ EMAIL_USER=your_email_address
 EMAIL_PASS=your_email_app_password
 ```
 
-Use your own credentials. Never commit real passwords, API keys, database credentials, or JWT secrets to GitHub.
-
-### Step 4: Start the Backend
+### 4. Start the backend
 
 ```bash
 npm run dev
 ```
 
-The backend runs on port `5000` by default.
+### 5. Install frontend dependencies
 
-### Step 5: Install Frontend Dependencies
-
-Open another terminal:
+Open another terminal.
 
 ```bash
 cd frontend
 npm install
 ```
 
-### Step 6: Configure Frontend Environment
+### 6. Configure the frontend
 
 Create a `.env` file inside the `frontend` directory.
 
@@ -511,102 +343,53 @@ Create a `.env` file inside the `frontend` directory.
 VITE_API_URL=http://localhost:5000/api
 ```
 
-### Step 7: Start the Frontend
+### 7. Start the frontend
 
 ```bash
 npm run dev
 ```
 
-Vite will display the local development URL in the terminal, usually:
+Open the URL displayed by Vite in your browser.
 
-```text
-http://localhost:5173
-```
+## 🔐 Security
 
-Open the displayed URL in your browser.
-
-## Running the Application
-
-### Backend Commands
-
-```bash
-npm run dev
-```
-
-Runs the backend using Nodemon.
-
-```bash
-npm start
-```
-
-Starts the backend using Node.js.
-
-```bash
-npm run seed
-```
-
-Runs the backend seed script.
-
-### Frontend Commands
-
-```bash
-npm run dev
-```
-
-Starts the Vite development server.
-
-```bash
-npm run build
-```
-
-Creates a production frontend build.
-
-```bash
-npm run preview
-```
-
-Previews the production build locally.
-
-```bash
-npm run lint
-```
-
-Runs ESLint on the frontend.
-
-## Security
-
-GatherGrid implements several security measures:
+GatherGrid implements:
 
 - Password hashing using bcryptjs.
 - JWT-based authentication.
-- Role-based authorization for protected API routes.
-- Organizer approval checks before event management.
+- Role-based authorization.
+- Organizer approval checks.
 - OTP expiration and hashed OTP storage.
-- Rate limiting for OTP and login endpoints.
+- Rate limiting for authentication endpoints.
 - Helmet security headers.
 - CORS configuration.
-- Validation of booking details and event identifiers.
 - Protected frontend routes.
-- Environment variables for sensitive configuration.
+- Environment variables for sensitive credentials.
 
-## Future Enhancements
-
-Potential future improvements include:
+## 🗺️ Future Enhancements
 
 - Online payment gateway integration.
 - Booking confirmation notifications.
-- Advanced event search and filtering.
-- Booking calendar and availability management.
 - Customer reviews and ratings.
+- Booking calendar and availability management.
 - Automated booking reminders.
-- Automated API documentation with Swagger.
+- Advanced search and filtering.
+- Automated API documentation using Swagger.
 - Unit and integration testing.
 - Production deployment and CI/CD automation.
 
----
-
-## Project Status
+## 📌 Project Status
 
 GatherGrid has been developed as a full-stack event discovery and booking application with customer, organizer, and administrator workflows.
 
-The project demonstrates full-stack development concepts including REST API design, database modeling, authentication, authorization, file uploads, and role-based application workflows.
+The project demonstrates practical full-stack development concepts including REST API design, database modeling, authentication, authorization, file uploads, and role-based application workflows.
+
+---
+
+<p align="center">
+  <strong>GatherGrid — Discover. Connect. Celebrate.</strong>
+</p>
+
+<p align="center">
+  Built with React, Node.js, Express, and MongoDB.
+</p>
